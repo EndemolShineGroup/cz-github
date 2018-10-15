@@ -23,7 +23,14 @@ export default function formatCommit(answers: Answers) {
     width: 80,
   };
 
-  const { body, issues, scope, subject, type = 'feat' } = answers;
+  const {
+    body,
+    isIssueAffected,
+    issues,
+    scope,
+    subject,
+    type = 'feat',
+  } = answers;
 
   // Hard limit this line
   const commitHeader = `${type}${
@@ -41,7 +48,7 @@ export default function formatCommit(answers: Answers) {
     })
     .join(', ');
 
-  const commitFooter = `${formattedIssues}`;
+  const commitFooter = isIssueAffected ? `${formattedIssues}` : '';
 
   const message = compact([commitHeader, commitBody, commitFooter]);
 

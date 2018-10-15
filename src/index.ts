@@ -9,8 +9,7 @@ let config: CommitizenConfig;
 try {
   config = loadConfig();
 } catch (error) {
-  // tslint:disable-next-line:no-console
-  console.error(
+  process.stderr.write(
     `Could not load project's Commitizen configuration from ${process.cwd()}.`,
   );
 }
@@ -18,7 +17,8 @@ try {
 export const prompter: Prompter = (cz, commit) => {
   const prompts = createPrompts({ config, pkg });
 
-  cz.prompt(prompts)
+  return cz
+    .prompt(prompts)
     .then(formatCommit)
     .then(commit);
 };
