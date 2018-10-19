@@ -7,10 +7,19 @@ describe('#validateSubject', () => {
     ).toContain('specify subject');
   });
 
-  it('prevents commits if subject is greater than 70 characters', () => {
+  it('prevents commits if subject is not lowercase', () => {
+    expect(
+      validateSubject('LOREM IPSUM DOLOR SIT AMET', {
+        type: 'feat',
+        scope: 'a custom scope',
+      }),
+    ).toContain('must be all lowercase');
+  });
+
+  it('prevents commits if header is greater than 100 characters', () => {
     expect(
       validateSubject(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+        'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
         { type: 'feat', scope: 'a custom scope' },
       ),
     ).toContain('characters or less');
@@ -19,7 +28,7 @@ describe('#validateSubject', () => {
   it('allows commits if subject passes all conditions', () => {
     expect(
       validateSubject(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+        'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
         { type: 'feat', scope: 'a custom scope' },
       ),
     ).toBeTruthy();

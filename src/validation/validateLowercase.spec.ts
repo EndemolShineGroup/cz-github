@@ -1,7 +1,7 @@
 import validateLowercase from './validateLowercase';
 
 describe('#validateLowercase', () => {
-  it("prevents commits if there's a capital letter", () => {
+  it(`prevents commits if there's a capital letter`, () => {
     expect(validateLowercase('Test')).toEqual(
       'The value must be all lowercase',
     );

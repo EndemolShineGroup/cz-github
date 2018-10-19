@@ -44,13 +44,7 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
       message: 'Write a short, imperative tense description of the change:',
       name: 'subject',
       type: 'input',
-      validate: (input: string, answers: any) => {
-        const isLower = validateLowercase(input);
-        if (isLower === true) {
-          return validateSubject(input, answers);
-        }
-        return isLower;
-      },
+      validate: validateSubject,
     },
     {
       message:
@@ -72,13 +66,7 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
         'GitHub Issue/PR ID(s) (comma/space separated, default is branch name, e.g. #1 #2)',
       name: 'issues',
       type: 'input',
-      validate: (input: string, answers: any) => {
-        const isLower = validateLowercase(input);
-        if (isLower === true) {
-          return validateIssues(input);
-        }
-        return isLower;
-      },
+      validate: validateIssues,
       when: isIssueAffected,
     },
   ].map((question) => {
