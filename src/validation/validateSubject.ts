@@ -1,9 +1,16 @@
-export default (input?: string) => {
-  if (!input) {
+export default (input: string, answers: any) => {
+  if (!input || input === '') {
     return 'Must specify subject';
   }
-  if (input.length > 72) {
-    return 'Subject should be 72 characters or less';
+
+  const typeSize = answers.type.length;
+  const scopeSize = answers.scope.length;
+
+  const inputSize = input.length;
+
+  if (typeSize + scopeSize + inputSize <= 100) {
+    return true;
   }
-  return true;
+
+  return `Subject should be ${100 - (typeSize + scopeSize)} characters or less`;
 };

@@ -11,6 +11,7 @@ import {
   formatGitBranchName,
 } from './util';
 import validateIssues from './validation/validateIssues';
+import validateLowercase from './validation/validateLowercase';
 import validateSubject from './validation/validateSubject';
 
 interface CreatePrompts {
@@ -27,6 +28,7 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
       message: `Select the type of change that you're committing:`,
       name: 'type',
       type: 'list',
+      validate: validateLowercase,
     },
     {
       choices: hasUserDefinedScopes
@@ -36,24 +38,33 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
         'What is the scope of this change (e.g. component)? (press enter to skip)',
       name: 'scope',
       type: hasUserDefinedScopes ? 'list' : 'input',
+      validate: validateLowercase,
     },
     {
       message: 'Write a short, imperative tense description of the change:',
       name: 'subject',
       type: 'input',
-      validate: validateSubject,
+      validate: (input: string, answers: any) => {
+        const isLower = validateLowercase(input);
+        if (isLower === true) {
+          return validateSubject(input, answers);
+        }
+        return isLower;
+      },
     },
     {
       message:
         'Provide a longer description of the change: (press enter to skip)',
       name: 'body',
       type: 'input',
+      validate: validateLowercase,
     },
     {
       default: false,
       message: 'Does this change affect any open issues?',
       name: 'isIssueAffected',
       type: 'confirm',
+      validate: validateLowercase,
     },
     {
       default: formatGitBranchName(gitBranch.sync()),
@@ -61,7 +72,13 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
         'GitHub Issue/PR ID(s) (comma/space separated, default is branch name, e.g. #1 #2)',
       name: 'issues',
       type: 'input',
-      validate: validateIssues,
+      validate: (input: string, answers: any) => {
+        const isLower = validateLowercase(input);
+        if (isLower === true) {
+          return validateIssues(input);
+        }
+        return isLower;
+      },
       when: isIssueAffected,
     },
   ].map((question) => {
