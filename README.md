@@ -33,7 +33,7 @@ Add the following to your `.czrc`:
 ## Usage
 
 ```bash
-$(yarn-bin)/git-cz
+$(yarn bin)/git-cz
 ```
 
 ## Configuration
