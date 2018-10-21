@@ -30,10 +30,12 @@ export function findLongest(strings: string[]): number {
 }
 
 export function formatGitBranchName(branchName: string) {
-  return (branchName || '')
+  const issueId = (branchName || '')
     .replace('feature/', '') // Get rid of `feature/` prefix
     .replace('fix/', '') // Get rid of `fix/` prefix
     .toLocaleUpperCase(); // Uppercase issue IDs
+
+  return issueId ? `#${issueId}` : '';
 }
 
 // Look for `.czrc` and require it
