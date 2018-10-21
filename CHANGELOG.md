@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.2...v1.0.3) (2018-10-21)
+
+
+### Bug Fixes
+
+* prefix issue IDs retrieved from branch name with # ([7035ce8](https://github.com/EndemolShineGroup/cz-github/commit/7035ce8)), closes [#5](https://github.com/EndemolShineGroup/cz-github/issues/5)
+
 ## [1.0.2](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.1...v1.0.2) (2018-10-19)
 
 
