@@ -11,7 +11,7 @@ import {
   CommitizenConfig,
   ConventionalCommitTypes,
   PackageJson,
-} from './types';
+} from '../types';
 
 const conventionalCommitTypes: ConventionalCommitTypes = require('conventional-commit-types');
 
@@ -67,4 +67,15 @@ export function createScopeChoices(config: CommitizenConfig, pkg: PackageJson) {
       value: scope,
     };
   });
+}
+
+export function splitIssues(issues?: string) {
+  if (!issues) {
+    return [];
+  }
+
+  const isSpaceSeparated = issues.includes(' ');
+  const separator = isSpaceSeparated ? ' ' : ',';
+
+  return issues.split(separator);
 }

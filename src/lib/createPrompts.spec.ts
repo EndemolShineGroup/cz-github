@@ -1,8 +1,8 @@
 import { Question } from 'inquirer';
 import find from 'lodash.find';
 
+import { CommitizenConfig, PackageJson } from '../types';
 import createPrompts from './createPrompts';
-import { CommitizenConfig, PackageJson } from './types';
 
 describe('#createPrompts', () => {
   let config: CommitizenConfig;

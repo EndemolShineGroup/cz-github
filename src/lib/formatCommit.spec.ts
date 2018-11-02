@@ -2,7 +2,7 @@ import os from 'os';
 
 import formatCommit from './formatCommit';
 
-import * as FIXTURE from './__fixtures__/commitAnswers';
+import * as FIXTURE from '../__fixtures__/commitAnswers';
 
 describe('#formatCommit', () => {
   it('should be a function', () => {

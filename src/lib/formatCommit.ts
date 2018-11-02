@@ -4,25 +4,16 @@ import { Answers } from 'inquirer';
 import compact from 'lodash.compact';
 import wrap from 'word-wrap';
 
-const splitIssues = (issues?: string) => {
-  if (!issues) {
-    return [];
-  }
+import { splitIssues } from './util';
 
-  const isSpaceSeparated = issues.includes(' ');
-  const separator = isSpaceSeparated ? ' ' : ',';
-
-  return issues.split(separator);
+const wrapOptions = {
+  indent: '',
+  newline: '\n',
+  trim: true,
+  width: 80,
 };
 
 export default function formatCommit(answers: Answers) {
-  const wrapOptions = {
-    indent: '',
-    newline: '\n',
-    trim: true,
-    width: 80,
-  };
-
   const {
     body,
     isIssueAffected,
@@ -40,7 +31,7 @@ export default function formatCommit(answers: Answers) {
   // Wrap these lines at 100 characters
   const commitBody = wrap(body, wrapOptions);
 
-  // JIRA issues and workflow
+  // GitHub issue IDs
   const formattedIssues = splitIssues(issues)
     .map((issue, index) => {
       // @TODO Make this better

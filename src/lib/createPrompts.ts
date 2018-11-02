@@ -2,8 +2,8 @@ import gitBranch from 'git-branch';
 import { Questions } from 'inquirer';
 import has from 'lodash.has';
 
+import { CommitizenConfig, PackageJson } from '../types';
 import isIssueAffected from './conditions/isIssueAffected';
-import { CommitizenConfig, PackageJson } from './types';
 import {
   addEOL,
   createCommitTypeChoices,

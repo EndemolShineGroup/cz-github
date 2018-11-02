@@ -8,6 +8,7 @@ import {
   findLongest,
   formatGitBranchName,
   loadConfig,
+  splitIssues,
 } from './util';
 
 describe('#addEOL', () => {
@@ -33,7 +34,7 @@ describe('#findLongest', () => {
 
 describe('#loadConfig', () => {
   it('loads a Commitizen config file from the current working directory', () => {
-    process.chdir(path.join(__dirname, '..'));
+    process.chdir(path.join(__dirname, '..', '..'));
     const result = loadConfig();
     expect(result).toEqual({
       path: './dist/index.js',
@@ -41,7 +42,7 @@ describe('#loadConfig', () => {
   });
 
   it('loads a Commitizen config file from a given path', () => {
-    const result = loadConfig(path.join(__dirname, '..'));
+    const result = loadConfig(path.join(__dirname, '..', '..'));
     expect(result).toEqual({
       path: './dist/index.js',
     });
@@ -85,5 +86,22 @@ describe('#createScopeChoices', () => {
     };
     const result = createScopeChoices(config, pkg);
     expect(result).toHaveLength(2);
+  });
+});
+
+describe('#splitIssues', () => {
+  it('returns an empty array if no issues are provided', () => {
+    const result = splitIssues();
+    expect(result).toHaveLength(0);
+  });
+
+  it('splits comma-separated issues', () => {
+    const result = splitIssues('#1,#2,#3');
+    expect(result).toHaveLength(3);
+  });
+
+  it('splits space-separated issues', () => {
+    const result = splitIssues('#1 #2 #3');
+    expect(result).toHaveLength(3);
   });
 });
