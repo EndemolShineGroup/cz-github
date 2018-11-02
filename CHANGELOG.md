@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.3...v1.0.4) (2018-11-02)
+
+
+### Bug Fixes
+
+* add more branch prefixes to remove ([5444029](https://github.com/EndemolShineGroup/cz-github/commit/5444029))
+* **validation:** improve issue validation ([38dcea8](https://github.com/EndemolShineGroup/cz-github/commit/38dcea8))
+
 ## [1.0.3](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.2...v1.0.3) (2018-10-21)
 
 
