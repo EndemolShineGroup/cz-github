@@ -30,10 +30,10 @@ export function findLongest(strings: string[]): number {
 }
 
 export function formatGitBranchName(branchName: string) {
-  const issueId = (branchName || '')
-    .replace('feature/', '') // Get rid of `feature/` prefix
-    .replace('fix/', '') // Get rid of `fix/` prefix
-    .toLocaleUpperCase(); // Uppercase issue IDs
+  const issueId = (branchName || '').replace(
+    /^(feature|feat|hotfix|fix)\//,
+    '',
+  );
 
   return issueId ? `#${issueId}` : '';
 }

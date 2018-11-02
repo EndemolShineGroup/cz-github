@@ -50,8 +50,10 @@ describe('#loadConfig', () => {
 
 describe('#formatGitBranchName', () => {
   it('removes any prefixes from a branch name', () => {
-    const result = formatGitBranchName('feature/123');
-    expect(result).toEqual('#123');
+    expect(formatGitBranchName('feature/123')).toEqual('#123');
+    expect(formatGitBranchName('feat/123')).toEqual('#123');
+    expect(formatGitBranchName('hotfix/456')).toEqual('#456');
+    expect(formatGitBranchName('fix/456')).toEqual('#456');
   });
 
   it('handles running on Travis CI when Git is not initialised', () => {
