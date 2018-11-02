@@ -32,9 +32,7 @@ Add the following to your `.czrc`:
 
 ## Usage
 
-```bash
-$(yarn bin)/git-cz
-```
+[![asciicast][icon-asciicast]][link-asciicast]
 
 ## Configuration
 
@@ -79,3 +77,5 @@ The adapter can be customised by specifying additional options in `.czrc`:
 [icon-prettier]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?longCache=true&style=flat-square
 [link-prettier]: https://prettier.io/
 
+[icon-asciicast]: https://asciinema.org/a/PnzcaSPetRvFSD6lXbiLcdh3V.svg
+[link-asciicast]: https://asciinema.org/a/PnzcaSPetRvFSD6lXbiLcdh3V
