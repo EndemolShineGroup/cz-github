@@ -1,6 +1,6 @@
 export default (input?: string) => {
   if (!input) {
-    return 'Must specify issue IDs';
+    return 'Must specify at least one issue ID';
   }
 
   const lowerCasedInput = input.toLocaleLowerCase();
@@ -10,5 +10,10 @@ export default (input?: string) => {
       'Please create a feature branch first.',
     ].join(' ');
   }
+
+  if (!input.startsWith('#')) {
+    return 'Issue IDs must be prefixed by #';
+  }
+
   return /#\d+/.test(input);
 };

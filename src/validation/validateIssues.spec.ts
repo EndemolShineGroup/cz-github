@@ -2,7 +2,11 @@ import validateIssues from './validateIssues';
 
 describe('#validateIssues', () => {
   it('prevents commits if no issue IDs specified', () => {
-    expect(validateIssues()).toContain('specify issue IDs');
+    expect(validateIssues()).toContain('specify at least one issue ID');
+  });
+
+  it('prevents commits with invalid issue IDs', () => {
+    expect(validateIssues('1')).toContain('must be prefixed by #');
   });
 
   it('prevents commits to the master and develop branches', () => {
