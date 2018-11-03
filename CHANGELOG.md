@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.4...v1.0.5) (2018-11-03)
+
+
+### Bug Fixes
+
+* **validation:** only check if first word of subject is lowercase ([20d7057](https://github.com/EndemolShineGroup/cz-github/commit/20d7057))
+
 ## [1.0.4](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.3...v1.0.4) (2018-11-02)
 
 
