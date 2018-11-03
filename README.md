@@ -1,4 +1,4 @@
-# @endemolshinegroup/cz-github
+![Banner][icon-banner]
 
 [![MIT Licensed][icon-license]][link-license]
 [![NPM Version][icon-npm]][link-npm]
@@ -50,6 +50,8 @@ The adapter can be customised by specifying additional options in `.czrc`:
   }
 }
 ```
+
+[icon-banner]: docs/assets/banner.png
 
 [icon-license]: https://img.shields.io/github/license/EndemolShineGroup/cz-github.svg?longCache=true&style=flat-square
 [link-license]: LICENSE
