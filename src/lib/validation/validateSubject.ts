@@ -5,9 +5,9 @@ export default (input: string, answers: any) => {
     return 'Must specify subject';
   }
 
-  const isLower = validateLowercase(input);
+  const isLower = validateLowercase(input.split(' ')[0]);
   if (isLower !== true) {
-    return isLower;
+    return 'The first word must be lowercase';
   }
 
   const typeSize = answers.type.length;

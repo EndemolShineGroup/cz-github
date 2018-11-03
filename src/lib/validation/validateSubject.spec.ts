@@ -7,13 +7,13 @@ describe('#validateSubject', () => {
     ).toContain('specify subject');
   });
 
-  it('prevents commits if subject is not lowercase', () => {
+  it('prevents commits if first word of subject is not lowercase', () => {
     expect(
-      validateSubject('LOREM IPSUM DOLOR SIT AMET', {
-        type: 'feat',
+      validateSubject('LOREM ipsum dolor sit amet', {
         scope: 'a custom scope',
+        type: 'feat',
       }),
-    ).toContain('must be all lowercase');
+    ).toContain('first word must be lowercase');
   });
 
   it('prevents commits if header is greater than 100 characters', () => {
