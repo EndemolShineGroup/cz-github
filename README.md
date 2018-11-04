@@ -18,8 +18,6 @@ A Commitizen adapter for GitHub
 
 ## Installation
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/EndemolShineGroup/cz-github.svg)](https://greenkeeper.io/)
-
 ```bash
 yarn add -D @endemolshinegroup/cz-github
 ```
