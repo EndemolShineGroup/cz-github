@@ -1,4 +1,4 @@
-import validateSubject from './validateSubject';
+import validateSubject, { MAXIMUM_LENGTH } from './validateSubject';
 
 describe('#validateSubject', () => {
   it('prevents commits if no subject specified', () => {
@@ -16,7 +16,7 @@ describe('#validateSubject', () => {
     ).toContain('first word must be lowercase');
   });
 
-  it('prevents commits if header is greater than 100 characters', () => {
+  it(`prevents commits if header is greater than ${MAXIMUM_LENGTH} characters`, () => {
     expect(
       validateSubject(
         'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
