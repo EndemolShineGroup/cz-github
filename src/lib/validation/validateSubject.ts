@@ -1,5 +1,7 @@
 import validateLowercase from './validateLowercase';
 
+export const MAXIMUM_LENGTH = 72;
+
 export default (input: string, answers: any) => {
   if (!input || input === '') {
     return 'Must specify subject';
@@ -15,9 +17,10 @@ export default (input: string, answers: any) => {
 
   const inputSize = input.length;
 
-  if (typeSize + scopeSize + inputSize <= 100) {
+  if (typeSize + scopeSize + inputSize <= MAXIMUM_LENGTH) {
     return true;
   }
 
-  return `Subject should be ${100 - (typeSize + scopeSize)} characters or less`;
+  return `Subject should be ${MAXIMUM_LENGTH -
+    (typeSize + scopeSize)} characters or less`;
 };
