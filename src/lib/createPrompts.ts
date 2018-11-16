@@ -10,6 +10,7 @@ import {
   createScopeChoices,
   formatGitBranchName,
 } from './util';
+import validateDescription from './validation/validateDescription';
 import validateIssues from './validation/validateIssues';
 import validateLowercase from './validation/validateLowercase';
 import validateSubject from './validation/validateSubject';
@@ -47,11 +48,18 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
       validate: validateSubject,
     },
     {
+      deafult: false,
+      message: 'Is this a breaking change?',
+      name: 'isBreak',
+      type: 'confirm',
+      validate: validateLowercase,
+    },
+    {
       message:
         'Provide a longer description of the change: (press enter to skip)',
       name: 'body',
       type: 'input',
-      validate: validateLowercase,
+      validate: validateDescription,
     },
     {
       default: false,

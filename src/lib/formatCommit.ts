@@ -20,6 +20,7 @@ export default function formatCommit(answers: Answers) {
     issues,
     scope,
     subject,
+    isBreak,
     type = 'feat',
   } = answers;
 
@@ -29,7 +30,10 @@ export default function formatCommit(answers: Answers) {
   }: ${subject.trim()}`.slice(0, wrapOptions.width);
 
   // Wrap these lines at 100 characters
-  const commitBody = wrap(body, wrapOptions);
+  const commitBody = wrap(
+    `${isBreak ? 'BREAKING CHANGE: ' : ''}${body ? body : ''}`,
+    wrapOptions,
+  );
 
   // GitHub issue IDs
   const formattedIssues = splitIssues(issues)

@@ -19,7 +19,7 @@ describe('#createPrompts', () => {
 
   it('creates valid prompts', () => {
     const result = createPrompts({ config, pkg });
-    expect(result).toHaveLength(6);
+    expect(result).toHaveLength(7);
     const scopePrompt = find(result, ['name', 'scope']) as Question;
     expect(scopePrompt.choices).toBeUndefined();
   });
@@ -35,7 +35,7 @@ describe('#createPrompts', () => {
       },
     };
     const result = createPrompts({ config: pullRequestsConfig, pkg });
-    expect(result).toHaveLength(6);
+    expect(result).toHaveLength(7);
 
     const scopePrompt = find(result, ['name', 'scope']) as Question;
     expect(scopePrompt.choices).toHaveLength(2);
