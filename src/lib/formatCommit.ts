@@ -55,8 +55,7 @@ const getBody = (body: string, isBreakingChange: boolean): string => {
 const formattedIssues = (issues: string) => {
   return splitIssues(issues)
     .map((issue, index) => {
-      let prefix = index === 0 ? 'Fixes' : 'fixes';
-      return `${prefix} ${issue}`;
+      return `${index === 0 ? 'Fixes' : 'fixes'} ${issue}`;
     })
     .join(', ');
 };
