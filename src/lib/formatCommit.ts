@@ -23,8 +23,6 @@ export default function formatCommit(answers: Answers) {
     type = 'feat',
   } = answers;
 
-  console.log('ANSWERS', answers);
-
   let messageArr: string[] = [];
 
   // header
