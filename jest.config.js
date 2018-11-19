@@ -2,7 +2,7 @@ const preset = require('ts-jest').jestPreset;
 
 module.exports = {
   preset: 'ts-jest',
-  collectCoverage: false,
+  collectCoverage: true,
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/tests/',
