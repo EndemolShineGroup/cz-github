@@ -20,7 +20,7 @@ export default function formatCommit(answers: Answers) {
     issues,
     scope,
     subject,
-    isBreak,
+    isBreakingChange,
     type = 'feat',
   } = answers;
 
@@ -31,7 +31,7 @@ export default function formatCommit(answers: Answers) {
 
   // Wrap these lines at 100 characters
   const commitBody = wrap(
-    `${isBreak ? 'BREAKING CHANGE: ' : ''}${body ? body : ''}`,
+    `${isBreakingChange ? 'BREAKING CHANGE: ' : ''}${body ? body : ''}`,
     wrapOptions,
   );
 

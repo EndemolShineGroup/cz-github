@@ -48,9 +48,9 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
       validate: validateSubject,
     },
     {
-      deafult: false,
+      default: false,
       message: 'Is this a breaking change?',
-      name: 'isBreak',
+      name: 'isBreakingChange',
       type: 'confirm',
       validate: validateLowercase,
     },

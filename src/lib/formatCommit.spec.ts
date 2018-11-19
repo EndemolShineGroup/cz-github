@@ -70,7 +70,7 @@ describe('#formatCommit', () => {
       FIXTURE.formattedBreakingBody,
       'Fixes #11, fixes #65, fixes #3168',
     ].join(os.EOL + os.EOL);
-    const result = formatCommit({ ...FIXTURE, isBreak: true });
+    const result = formatCommit({ ...FIXTURE, isBreakingChange: true });
     expect(result).toEqual(message);
   });
 
