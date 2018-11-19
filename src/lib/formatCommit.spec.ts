@@ -32,38 +32,6 @@ describe('#formatCommit', () => {
     expect(result).toEqual(message);
   });
 
-  it('should commit without any issue IDs', () => {
-    const message = [
-      'build(api): This took waaaaay too long',
-      FIXTURE.formattedBody,
-    ].join(os.EOL + os.EOL);
-    const result = formatCommit({
-      ...FIXTURE,
-      isIssueAffected: false,
-      issues: undefined,
-    });
-    expect(result).toEqual(message);
-  });
-
-  it('should commit without a scope', () => {
-    const message = [
-      'build: This took waaaaay too long',
-      FIXTURE.formattedBody,
-      'Fixes #11, fixes #65, fixes #3168',
-    ].join(os.EOL + os.EOL);
-    const result = formatCommit({ ...FIXTURE, scope: undefined });
-    expect(result).toEqual(message);
-  });
-
-  it('should commit without a body', () => {
-    const message = [
-      'build(api): This took waaaaay too long',
-      'Fixes #11, fixes #65, fixes #3168',
-    ].join(os.EOL + os.EOL);
-    const result = formatCommit({ ...FIXTURE, body: undefined });
-    expect(result).toEqual(message);
-  });
-
   it('should commit with breaking change', () => {
     const message = [
       'build(api): This took waaaaay too long',
@@ -79,6 +47,8 @@ describe('#formatCommit', () => {
       isIssueAffected: true,
       issues: FIXTURE.issues,
       subject: FIXTURE.subject,
+      body: '',
+      scope: '',
     });
     const message = [
       'feat: This took waaaaay too long',
