@@ -33,7 +33,7 @@ export default function formatCommit(answers: Answers) {
   }
 
   if (isIssueAffected) {
-    messageArr.push(formattedIssues(issues));
+    messageArr.push(getFormattedIssues(issues));
   }
 
   return messageArr.join(os.EOL + os.EOL);
@@ -52,7 +52,7 @@ const getBody = (body: string, isBreakingChange: boolean): string => {
 };
 
 // GitHub issue IDs
-const formattedIssues = (issues: string) => {
+const getFormattedIssues = (issues: string) => {
   return splitIssues(issues)
     .map((issue, index) => {
       return `${index === 0 ? 'Fixes' : 'fixes'} ${issue}`;
