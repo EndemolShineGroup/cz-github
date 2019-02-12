@@ -64,7 +64,7 @@
     "@types/lodash.map": "^4.6.13",
     "@types/lodash.max": "^4.0.4",
     "@types/lodash.padend": "^4.6.4",
-    "@types/node": "^10",
+    "@types/node": "^11.9.0",
     "commitizen": "^3",
     "husky": "^1",
     "jest": "^23",
