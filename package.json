@@ -55,7 +55,7 @@
     "@semantic-release/changelog": "^3",
     "@semantic-release/git": "^7",
     "@types/git-branch": "^2.0.0",
-    "@types/inquirer": "^0.0.43",
+    "@types/inquirer": "^0.0.44",
     "@types/jest": "^23",
     "@types/lodash.compact": "^3.0.4",
     "@types/lodash.find": "^4.6.4",
