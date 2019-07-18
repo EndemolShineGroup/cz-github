@@ -65,7 +65,7 @@
     "@types/lodash.max": "^4.0.4",
     "@types/lodash.padend": "^4.6.4",
     "@types/node": "^10",
-    "commitizen": "^3",
+    "commitizen": "^4.0.0",
     "husky": "^1",
     "jest": "^23",
     "lint-staged": "^8.0.0",
