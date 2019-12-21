@@ -35,7 +35,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "conventional-commit-types": "^2.2.0",
+    "conventional-commit-types": "^3.0.0",
     "git-branch": "^2.0.1",
     "lodash.compact": "^3.0.1",
     "lodash.get": "^4.4.2",
