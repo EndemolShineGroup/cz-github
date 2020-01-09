@@ -72,7 +72,7 @@
     "lodash.find": "^4.6.0",
     "prettier": "^1",
     "rimraf": "^2",
-    "semantic-release": "^15",
+    "semantic-release": "^16.0.0",
     "ts-jest": "^23",
     "tslint": "^5",
     "tslint-config-prettier": "^1",
