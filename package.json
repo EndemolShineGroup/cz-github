@@ -52,7 +52,7 @@
     "@endemolshinegroup/cz-github": "^1",
     "@endemolshinegroup/prettier-config": "^1",
     "@endemolshinegroup/tslint-config": "^1",
-    "@semantic-release/changelog": "^3",
+    "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^7",
     "@types/git-branch": "^2.0.0",
     "@types/inquirer": "^0.0.43",
