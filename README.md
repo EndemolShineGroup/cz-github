@@ -3,7 +3,7 @@
 [![MIT Licensed][icon-license]][link-license]
 [![NPM Version][icon-npm]][link-npm]
 [![Build Status][icon-ci]][link-ci]
-[![Greenkeeper Status][icon-greenkeeper]][link-greenkeeper]
+[![Dependabot Status][icon-dependabot]][link-dependabot]
 
 [![Code Issues][icon-issues]][link-issues]
 [![Codebase Maintainability][icon-maintainability]][link-maintainability]
@@ -59,8 +59,8 @@ The adapter can be customised by specifying additional options in `.czrc`:
 [link-npm]: https://www.npmjs.com/package/@endemolshinegroup/cz-github
 [icon-ci]: https://img.shields.io/travis/com/EndemolShineGroup/cz-github.svg?longCache=true&style=flat-square
 [link-ci]: https://travis-ci.com/EndemolShineGroup/cz-github
-[icon-greenkeeper]: https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?longCache=true&style=flat-square
-[link-greenkeeper]: https://greenkeeper.io/
+[icon-dependabot]: https://flat.badgen.net/dependabot/EndemolShineGroup/cz-github?icon=dependabot
+[link-dependabot]: https://dependabot.com/
 
 [icon-issues]: https://img.shields.io/codeclimate/issues/EndemolShineGroup/cz-github.svg?longCache=true&style=flat-square
 [link-issues]: https://codeclimate.com/github/EndemolShineGroup/cz-github/issues
