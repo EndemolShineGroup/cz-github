@@ -435,9 +435,9 @@
     "@types/lodash" "*"
 
 "@types/lodash.find@^4.6.4":
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/@types/lodash.find/-/lodash.find-4.6.4.tgz#efae51b21310db5f6bf8a868c85d8ce978c3b61e"
-  integrity sha512-NTiLjt+IOxJxVIwZAksiK4rFmn2xEMkL04pY3CzVcv13Aj4FRszkMuN4O20zaPsXRJZuifsM0nXOcAOekmiu3g==
+  version "4.6.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.find/-/lodash.find-4.6.6.tgz#9b298092ff15642ddf0c6b04d9e0a2f3c49ac845"
+  integrity sha512-rpfXWzKWaw12XMcdQYA7f0xVmkXwJkhPPON69pGVFNYF6/66CduGyLiYnoZk1xBOvGwMnmyrCZ/yJewPO4OMeg==
   dependencies:
     "@types/lodash" "*"
 
