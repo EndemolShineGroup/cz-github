@@ -442,9 +442,9 @@
     "@types/lodash" "*"
 
 "@types/lodash.max@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/lodash.max/-/lodash.max-4.0.4.tgz#cedcc80d9b9fb32a6a75bdcb40c46717117a2f6b"
-  integrity sha512-ltGeWhXtkVeG1VYDrR6rscWGfSNaVy8eb1uuBqhyxF4xH+CGXL7YmH5Iu71IqzAfFL22ugsroXiz/Ge4jsz+Zw==
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.max/-/lodash.max-4.0.6.tgz#3e47d27d9fc6f47b14ba7c16b77b60916f2dfde4"
+  integrity sha512-zl9Z4eoGcsvziXLCxPV9AcKRn2xhM2BVTl/TiPWh1M7ek3TSjMx8QRBi3IZuVuJZzxIfbuI5lFoteba7qsZ0jA==
   dependencies:
     "@types/lodash" "*"
 
