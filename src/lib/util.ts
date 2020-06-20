@@ -2,18 +2,13 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 
+import conventionalCommitTypes from 'conventional-commit-types';
 import get from 'lodash.get';
 import map from 'lodash.map';
 import max from 'lodash.max';
 import padEnd from 'lodash.padend';
 
-import {
-  CommitizenConfig,
-  ConventionalCommitTypes,
-  PackageJson,
-} from '../types';
-
-const conventionalCommitTypes: ConventionalCommitTypes = require('conventional-commit-types');
+import { CommitizenConfig, PackageJson } from '../types';
 
 export function addEOL(message: string) {
   return `${message}${os.EOL}`;

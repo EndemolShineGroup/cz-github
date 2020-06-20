@@ -1,9 +1,8 @@
 import os from 'os';
 import path from 'path';
 
-const conventionalCommitTypes: ConventionalCommitTypes = require('conventional-commit-types');
+import conventionalCommitTypes from 'conventional-commit-types';
 
-import { ConventionalCommitTypes } from '../types';
 import {
   addEOL,
   createCommitTypeChoices,

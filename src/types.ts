@@ -9,15 +9,6 @@ export interface CommitizenConfig {
   '@endemolshinegroup/cz-github'?: AdapterConfig;
 }
 
-export interface ConventionalCommitTypes {
-  types: {
-    [key: string]: {
-      description: string;
-      name: string;
-    };
-  };
-}
-
 export interface AdapterConfig {
   scopes?: {
     [key: string]: string;
