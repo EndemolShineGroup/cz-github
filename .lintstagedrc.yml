@@ -3,4 +3,3 @@ linters:
     - "tslint --fix"                        # Run TSLint
     - "prettier --write"                    # Run Prettier
     - "jest --bail --findRelatedTests"      # Run tests
-    - "git add"
