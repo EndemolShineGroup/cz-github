@@ -1,6 +1,9 @@
 import os from 'os';
 import path from 'path';
 
+const conventionalCommitTypes: ConventionalCommitTypes = require('conventional-commit-types');
+
+import { ConventionalCommitTypes } from '../types';
 import {
   addEOL,
   createCommitTypeChoices,
@@ -66,7 +69,8 @@ describe('#formatGitBranchName', () => {
 describe('#createCommitTypeChoices', () => {
   it('removes any prefixes from a branch name', () => {
     const result = createCommitTypeChoices();
-    expect(result).toHaveLength(11);
+    const expectedLength = Object.keys(conventionalCommitTypes.types).length;
+    expect(result).toHaveLength(expectedLength);
   });
 });
 
