@@ -44,7 +44,7 @@
     "lodash.map": "^4",
     "lodash.max": "^4",
     "lodash.padend": "^4",
-    "tslib": "^1",
+    "tslib": "^2",
     "word-wrap": "^1"
   },
   "devDependencies": {
