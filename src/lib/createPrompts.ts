@@ -1,5 +1,5 @@
 import { branch } from 'git-rev-sync';
-import { Questions } from 'inquirer';
+import { Question } from 'inquirer';
 import has from 'lodash.has';
 
 import { CommitizenConfig, PackageJson } from '../types';
@@ -20,7 +20,7 @@ interface CreatePrompts {
   pkg: PackageJson;
 }
 
-export default ({ config, pkg }: CreatePrompts): Questions => {
+export default ({ config, pkg }: CreatePrompts): Question[] => {
   const hasUserDefinedScopes = has(config, `${pkg.name}.scopes`);
 
   return [

@@ -1,4 +1,4 @@
-import { Question } from 'inquirer';
+import { ListQuestion } from 'inquirer';
 import find from 'lodash.find';
 
 import { CommitizenConfig, PackageJson } from '../types';
@@ -20,7 +20,7 @@ describe('#createPrompts', () => {
   it('creates valid prompts', () => {
     const result = createPrompts({ config, pkg });
     expect(result).toHaveLength(7);
-    const scopePrompt = find(result, ['name', 'scope']) as Question;
+    const scopePrompt = find(result, ['name', 'scope']) as ListQuestion;
     expect(scopePrompt.choices).toBeUndefined();
   });
 
@@ -37,7 +37,7 @@ describe('#createPrompts', () => {
     const result = createPrompts({ config: pullRequestsConfig, pkg });
     expect(result).toHaveLength(7);
 
-    const scopePrompt = find(result, ['name', 'scope']) as Question;
+    const scopePrompt = find(result, ['name', 'scope']) as ListQuestion;
     expect(scopePrompt.choices).toHaveLength(2);
   });
 });
