@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.5...v2.0.0) (2020-06-21)
+
+
+### Bug Fixes
+
+* **validation:** change header max length to 72 ([c98d52d](https://github.com/EndemolShineGroup/cz-github/commit/c98d52d))
+
+
+### Build System
+
+* change minimum supported Node version ([d392e42](https://github.com/EndemolShineGroup/cz-github/commit/d392e42))
+
+
+### Features
+
+* **flow:** add new flow step ([4249677](https://github.com/EndemolShineGroup/cz-github/commit/4249677)), closes [#11](https://github.com/EndemolShineGroup/cz-github/issues/11)
+
+
+### BREAKING CHANGES
+
+* change minimum supported version of Node to v10
+
 ## [1.0.5](https://github.com/EndemolShineGroup/cz-github/compare/v1.0.4...v1.0.5) (2018-11-03)
 
 
