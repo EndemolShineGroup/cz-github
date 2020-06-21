@@ -70,7 +70,7 @@
     "husky": "^4",
     "jest": "^26",
     "lint-staged": "^10",
-    "prettier": "^1",
+    "prettier": "^2",
     "rimraf": "^3",
     "semantic-release": "^15",
     "ts-jest": "^26",
