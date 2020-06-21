@@ -1,4 +1,4 @@
-import gitBranch from 'git-branch';
+import { branch } from 'git-rev-sync';
 import { Questions } from 'inquirer';
 import has from 'lodash.has';
 
@@ -69,7 +69,7 @@ export default ({ config, pkg }: CreatePrompts): Questions => {
       validate: validateLowercase,
     },
     {
-      default: formatGitBranchName(gitBranch.sync()),
+      default: formatGitBranchName(branch()),
       message:
         'GitHub Issue/PR ID(s) (comma/space separated, default is branch name, e.g. #1 #2)',
       name: 'issues',
