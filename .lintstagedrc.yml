@@ -1,5 +1,4 @@
-linters:
-  "src/**/*.ts":
-    - "tslint --fix"                        # Run TSLint
-    - "prettier --write"                    # Run Prettier
-    - "jest --bail --findRelatedTests"      # Run tests
+"src/**/*.ts":
+  - "tslint --fix"                        # Run TSLint
+  - "prettier --write"                    # Run Prettier
+  - "jest --bail --findRelatedTests"      # Run tests
