@@ -74,7 +74,7 @@
     "rimraf": "^3",
     "semantic-release": "^17",
     "ts-jest": "^26",
-    "tslint": "^5",
+    "tslint": "^6",
     "tslint-config-prettier": "^1",
     "tslint-eslint-rules": "^5",
     "typedoc": "^0.17.7",
